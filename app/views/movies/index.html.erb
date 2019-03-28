@@ -1,0 +1,20 @@
+<% if !user_signed_in? %>
+	  <div class="jumbotron">
+	    <h1>Review Pixar & Disney movies</h1>
+	    <p>All your favourite disney movie reviews in one place.</p>
+	    <p><%= link_to "Sign Up To review movies", new_user_registration_path, class: "btn btn-primary btn-lg" %></p>
+	  </div>
+	<% end %>
+ 
+
+	<div class="row">
+	  <% @movies.each do |movie| %>
+	    <div class="col-sm-4 col-md-3">
+	      <div class="thumbnail">
+	        <%= link_to (image_tag movie.image.url(:medium), class: 'image'), movie %>
+					<% if current_user.admin? %>
+					<% end %>
+	      </div>
+	    </div>
+	  <% end %>
+	</div>

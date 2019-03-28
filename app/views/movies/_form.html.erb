@@ -1,0 +1,55 @@
+<%= form_for @movie, html: { multipart: true } do |form| %>
+  <% if movie.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(movie.errors.count, "error") %> movie can't be saved:</h2>
+
+      <ul>
+      <% movie.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+<table>
+<tr>
+<td>
+  <div class="field">
+    <%= form.label :title %>
+    <br>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <br>
+    <%= form.text_field :description %>
+  </div>
+  <div class="field">
+    <%= form.label :director %>
+    <br>
+    <%= form.text_field :director %>
+  </div>
+
+<div class="field">
+    <%= form.label :category %>
+    <br>
+    <%= form.text_field :category %>
+  </div>
+  
+<div class="field">
+    <%= form.label :image %>
+    <%= form.file_field :image %> 
+  </div>
+<br>
+<br>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+
+<td>
+</tr>
+</table>
