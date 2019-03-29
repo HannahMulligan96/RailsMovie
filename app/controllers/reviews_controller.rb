@@ -19,7 +19,7 @@ class ReviewsController < ApplicationController
 
     if @review.save
       redirect_to @movie
-      UserMailer.welcome_email(@user = 'hannahm1234.hm@gmail.com').deliver
+      UserMailer.welcome_email(@user = 'movieapprails@gmail.com').deliver
     else
       render 'new'
     end

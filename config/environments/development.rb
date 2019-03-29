@@ -60,11 +60,13 @@ Rails.application.configure do
     address:              'smtp.gmail.com',
     port:                 587,
     domain:               'example.com',
-    user_name:            'hannahm1234.hm@gmail.com',
-    password:             '7495594722',
+    user_name:            'movieapprails@gmail.com',
+    password:             'Rails1234',
     authentication:       'plain',
     enable_starttls_auto: true }
 
+
+   
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
